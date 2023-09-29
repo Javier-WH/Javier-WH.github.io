@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Exo2';
+  src: url('./fonts/Exo2-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./fonts/OpenSans-SemiBold.ttf') format('truetype');
+
+}
+:root{
+  --main-color: #07244C;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo2';
+}
+
+
+.header-background {
+  margin: 0px;
+  width: 100vw;
+  height: 17vw;
+  border-bottom: 1.5px solid var(--main-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.header-background > * {
+  margin-right: -5px;
+}
+
+#image-background {
+  padding: 1vw;
+  background-color:  var(--main-color);
+  position: relative;
+  width: 100%;
+
+}
+
+#image-background2 {
+  width: 100%;
+  background-color:  var(--main-color);
+  background-image: url("./SVG/bg.svg");
+  background-size: cover;
+  background-position: right center;
+
+}
+@media screen and (max-width: 1140px){
+ 
+  .header-background {
+    height: 200px;
+    width: 98vw;
+  }
+}
+
+@media screen and (max-width: 800px){
+  #image-background2 {
+   display: none;
+   width: 0;
+   height: 0;
+   background-image: none;
+  }
+  #image-background {
+    padding: 1vw;
+    background-color:  var(--main-color);
+    position: relative;
+    margin: 0;
+  
+  }
+  .header-background{
+    display: block;
+    margin: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16vw;
+  }
+  .header-background > * {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 344px){
+  #image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
